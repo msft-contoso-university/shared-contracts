@@ -1,3 +1,4 @@
-# agentic-shared-contracts
+# shared-contracts
 
-Shared API and event contracts for Agentic SDLC demo services.
+Shared API and event contracts for SDLC demo services.
+
