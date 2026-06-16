@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "order-created.v2",
+  "type": "object",
+  "required": ["orderId", "customerId", "sku", "quantity", "status", "createdAt"],
+  "properties": {
+    "orderId": { "type": "string" },
+    "customerId": { "type": "string" },
+    "sku": { "type": "string" },
+    "quantity": { "type": "integer", "minimum": 1 },
+    "status": { "type": "string", "enum": ["created"] },
+    "correlationId": { "type": ["string", "null"] },
+    "createdAt": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}
