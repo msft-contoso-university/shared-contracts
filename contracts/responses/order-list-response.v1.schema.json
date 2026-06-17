@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/TeplrGuy/shared-contracts/contracts/responses/order-list-response.v1.schema.json",
+  "title": "OrderListResponse",
+  "description": "Paginated list of orders returned by the orders-service GET /orders endpoint.",
+  "type": "object",
+  "required": ["orders", "pagination"],
+  "properties": {
+    "orders": {
+      "type": "array",
+      "items": { "$ref": "../models/order.v1.schema.json" }
+    },
+    "pagination": {
+      "type": "object",
+      "required": ["page", "limit", "total", "totalPages"],
+      "properties": {
+        "page": { "type": "integer", "minimum": 1 },
+        "limit": { "type": "integer", "minimum": 1, "maximum": 100 },
+        "total": { "type": "integer", "minimum": 0 },
+        "totalPages": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

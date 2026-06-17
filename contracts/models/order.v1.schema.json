@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/TeplrGuy/shared-contracts/contracts/models/order.v1.schema.json",
+  "title": "Order",
+  "description": "Order model shared across the listing and tracking experiences.",
+  "type": "object",
+  "required": [
+    "orderId",
+    "orderNumber",
+    "status",
+    "item",
+    "customerName",
+    "createdAt",
+    "updatedAt"
+  ],
+  "properties": {
+    "orderId": { "type": "string" },
+    "orderNumber": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new_order",
+        "in_production",
+        "shipped",
+        "cancelled",
+        "rejected",
+        "draft"
+      ]
+    },
+    "item": { "type": "string" },
+    "customerName": { "type": "string" },
+    "shippingService": {
+      "type": "string",
+      "enum": ["standard", "express", "overnight"]
+    },
+    "trackingCode": { "type": "string" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}
