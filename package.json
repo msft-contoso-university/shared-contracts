@@ -5,6 +5,9 @@
   "description": "Shared contracts for SDLC demo",
   "scripts": {
     "validate": "node scripts/validate.js"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
   }
 }
-
