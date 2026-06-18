@@ -3,7 +3,7 @@ description: Review pull requests — dual review, backward compatibility, semve
 on:
   pull_request:
     types: [opened, synchronize, reopened, ready_for_review]
-roles: [admin, maintainer, write]
+  roles: [admin, maintainer, write]
 permissions:
   copilot-requests: write
   contents: read
